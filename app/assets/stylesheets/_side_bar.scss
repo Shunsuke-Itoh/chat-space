@@ -10,22 +10,18 @@
     font-weight: bold;
     color : #FFFFFF;
     line-height: 100px;
-    justify-content: center;
     padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
 
     &__name {
-      float: left;
-      display: flex;
     }
 
     &__icon {
-      display: flex;
-      float: right;
     }
 
     &__btn {
       color: #FFFFFF;
-      letter-spacing: 8px;
     }
   }
 
