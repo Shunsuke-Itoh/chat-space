@@ -1,4 +1,4 @@
-.sidebar {
+.side_bar {
   width: 300px;
   background-color: #2f3e51;
   height: 100vh;
@@ -11,8 +11,7 @@
     color : #FFFFFF;
     line-height: 100px;
     padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
+    @include flex-between;
 
     &__name {
     }
