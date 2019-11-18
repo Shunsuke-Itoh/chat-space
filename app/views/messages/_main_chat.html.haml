@@ -1,19 +1,28 @@
-.main_chat
+.main__chat
   .header
     .group
-      .group_name
+      .group__name
         group name
       .group-member
         Menber
-    .edit_btn
-      Edit
+    .edit
+      = link_to "###", class: "edit__btn" do
+        Edit
   .message
-    .message_user
-      .message_user_name
+    .message__user
+      .message__user__name
         ◯◯◯
-      .message_user_date
+      .message__user__date
         2019/11/15/13:13:13
-    .message_main
+    .message__main
       こんにちは
-  .chat-input-form
-    
+    .chat-input-form
+      .input-box
+        .input-box__massage
+          %input{:type => "text", :name => "massage", :placeholder => "type a message", class: "input-box__textfield"}/
+        .input-box__image
+          %label{class: "input-box__image-btn"}
+            = icon('fas', 'image')
+            %input{type: "file", class: "input-box__image__none"}
+      .input-btn
+        %input{:type => "submit", :value => "SEND", class: "input-btn__send"}
