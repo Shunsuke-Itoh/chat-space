@@ -1,6 +1,8 @@
 @import "./config/reset";
 @import "./mixins/mixin";
+@import "./config/colors";
 @import "font-awesome-sprockets";
+@import "./modules/flash";
 @import "./font-awesome";
 @import "./modules/user";
 @import "./modules/wrapper";
