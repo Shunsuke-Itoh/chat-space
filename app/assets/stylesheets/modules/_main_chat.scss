@@ -73,7 +73,7 @@
 
     &__main {
       font-size: 14px;
-      color: #434A54;
+      color: $black;
       padding: 0 40px;
     }
 
@@ -94,7 +94,7 @@
         &__massage {
           ::-webkit-input-placeholder {
             font-size: 16px;
-            color: #434A54;
+            color: $black;
             padding-left: 10px;
           }
           width: 100%;
@@ -107,7 +107,7 @@
         }
 
         &__image-btn {
-          background-color: white;
+          background-color: $white;
           height: 50px;
           line-height: 50px;
           font-size: 1.3rem;
@@ -126,7 +126,7 @@
           background-color: #38AEF0;
           height: 50px;
           width: 100px;
-          color: white;
+          color: $white;
         }
       }
     }

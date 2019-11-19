@@ -1,12 +1,13 @@
 .side_bar
   .user
-    .user__name
-      ◯◯◯
-    .user__icon
-      = link_to "#", class: "user__btn" do
-        = icon('far', 'edit')
-      = link_to "##", class: "user__btn" do
-        = icon('fas', 'cog')
+    %h3.user__name
+      = current_user.name
+    %ul.user__icon
+      %li.iist
+        = link_to "#", class: "user__btn" do
+          = icon('far', 'edit')
+        = link_to edit_user_path(current_user), class: "user__btn" do
+          = icon('fas', 'cog')
   .group-lists
     .group-lists__name
       ◯◯グループ

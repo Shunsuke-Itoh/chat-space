@@ -1,14 +1,14 @@
 .side_bar {
   width: 300px;
-  background-color: #2f3e51;
+  background-color: $side_blue_dark;
   height: 100vh;
 
   .user {
-    background-color: #253141;
+    background-color: $side_blue_dark;
     height: 100px;
     font-size: 16px;
     font-weight: bold;
-    color : #FFFFFF;
+    color : $white;
     line-height: 100px;
     padding: 0 20px;
     @include flex-between;
@@ -20,13 +20,13 @@
     }
 
     &__btn {
-      color: #FFFFFF;
+      color: $white;
     }
   }
 
   .group-lists {
     font-weight: bold;
-    color: #FFFFFF;
+    color: $white;
     margin: 20px 0 40px;
     padding: 0 20px;
   
