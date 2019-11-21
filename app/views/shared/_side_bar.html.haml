@@ -1,0 +1,18 @@
+.side_bar
+  .user
+    %h3.user__name
+      = current_user.name
+    %ul.user__icon
+      %li.iist
+        = link_to new_group_path, class: "user__btn" do
+          = icon('far', 'edit')
+        = link_to edit_user_path(current_user), class: "user__btn" do
+          = icon('fas', 'cog')
+  .group-lists
+    - current_user.groups.each do |group|
+      .group-list
+        = link_to group_messages_path(group) do
+          .group-list__name
+            = group.name
+          .group-list__message
+            メッセージはまだありません
