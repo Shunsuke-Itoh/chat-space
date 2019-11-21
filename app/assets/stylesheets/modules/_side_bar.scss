@@ -25,17 +25,21 @@
   }
 
   .group-lists {
-    font-weight: bold;
-    color: $white;
+
     margin: 20px 0 40px;
     padding: 0 20px;
-  
-    &__name {
-      font-size: 15px;
-    }
 
-    &__message {
-      font-size: 11px;
+    .group_list {
+      font-weight: bold;
+      color: $white;
+      
+      &__name {
+        font-size: 15px;
+      }
+
+      &__message {
+        font-size: 11px;
+      }
     }
   }
 }

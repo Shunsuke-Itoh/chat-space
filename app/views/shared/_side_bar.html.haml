@@ -9,7 +9,10 @@
         = link_to edit_user_path(current_user), class: "user__btn" do
           = icon('fas', 'cog')
   .group-lists
-    .group-lists__name
-      ◯◯グループ
-    .group-lists__message
-      こんにちは
+    - current_user.groups.each do |group|
+      .group-list
+        = link_to '##' do
+          .group-list__name
+            = group.name
+          .group-list__message
+            メッセージはまだありません
