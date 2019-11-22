@@ -17,12 +17,13 @@
     .message__main
       こんにちは
     .chat-input-form
+      = form_for [@group, @message] do |f|
       .input-box
         .input-box__massage
-          %input{type: "text", name: "massage", placeholder: "type a message", class: "input-box__textfield"}/
-        .input-box__image
-          %label{class: "input-box__image-btn"}
-            = icon('fas', 'image')
-            %input{type: "file", class: "input-box__image__none"}
+          = f.text_field :content, placeholder: "type a message", class: "input-box__textfield"
+          .input-box__image
+            = f.label :image, class: "input-box__image-btn"
+              = icon('fas', 'image')
+              = f.file_field :image, class: "input-box__image__none"
       .input-btn
-        %input{type: "submit", value: "SEND", class: "input-btn__send"}
+        = f.submit 'SEND', class: "input-btn__send"
