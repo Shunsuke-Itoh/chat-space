@@ -26,19 +26,19 @@
 
   .group-lists {
 
-    margin: 20px 0 40px;
-    padding: 0 20px;
-
-    .group_list {
+    .group-list {
       font-weight: bold;
-      color: $white;
+      margin: 20px 0 40px;
+      padding: 0 20px;
       
       &__name {
         font-size: 15px;
+        color: $white;
       }
 
       &__message {
         font-size: 11px;
+        color: $white;
       }
     }
   }

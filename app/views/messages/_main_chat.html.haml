@@ -2,28 +2,24 @@
   .header
     .group
       .group__name
-        group name
+        = @group.name
       .group-member
-        Menber
+        - @group.users.each do |user|
+          = user.name
     .edit
-      = link_to "###", class: "edit__btn" do
+      = link_to edit_group_path(@group.id), class: "edit__btn" do
         Edit
-  .message
-    .message__user
-      .message__user__name
-        ◯◯◯
-      .message__user__date
-        2019/11/15/13:13:13
-    .message__main
-      こんにちは
+
+  .messages
+    = render @messages
     .chat-input-form
       = form_for [@group, @message] do |f|
-      .input-box
-        .input-box__massage
-          = f.text_field :content, placeholder: "type a message", class: "input-box__textfield"
+        .input-box
+          .input-box__message
+            = f.text_field :content, placeholder: "type a message", class: "input-box__textfield"
           .input-box__image
-            = f.label :image, class: "input-box__image-btn"
+            = f.label :image, class: "input-box__image-btn" do
               = icon('fas', 'image')
               = f.file_field :image, class: "input-box__image__none"
-      .input-btn
-        = f.submit 'SEND', class: "input-btn__send"
+          .input-btn
+            = f.submit 'SEND', class: "input-btn__send"

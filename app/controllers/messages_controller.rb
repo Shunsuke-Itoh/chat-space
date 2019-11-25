@@ -3,23 +3,23 @@ class MessagesController < ApplicationController
   
   def index
     @message = Message.new
-    @message = @group.message.includes(:user)
+    @messages = @group.messages.includes(:user)
   end
 
   def create
-    @message = @group.message.new(message_params)
-      if @message.save
-        redirect_to group_message_path(@group), notice: 'メッセージを送信しました。'
-      else
-        @messages = @group.message.includes(:user)
-        flash.now[:alert] = 'メッセージを入力してください。'
-        render :index
-      end
+    @message = @group.messages.new(message_params)
+    if @message.save
+      redirect_to group_messages_path(@group), notice: 'メッセージを送信しました。'
+    else
+      @messages = @group.messages.includes(:user)
+      flash.now[:alert] = 'メッセージを入力してください。'
+      render :index
+    end
   end
 
   private
   def message_params
-    marams.require(:message).permit(:content, :image).merge(user_id: current_user.id)
+    params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
   end
 
   def set_group
