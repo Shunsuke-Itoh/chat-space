@@ -72,10 +72,13 @@ li {
       padding-right: 20px;
       padding-left: 20px;
       box-sizing: border-box;
+      text-align: center;
+      line-height: 50px;
     }
     &--right {
       float: right;
       width: 70%;
+      line-height: 50px;
     }
   }
 }

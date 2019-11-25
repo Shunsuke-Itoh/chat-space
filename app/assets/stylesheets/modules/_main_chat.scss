@@ -84,7 +84,6 @@
       position: absolute;
       bottom: 0;
       width: calc(100vw - 380px);
-      @include flex-left;
 
       .input-box {
         position: relative;

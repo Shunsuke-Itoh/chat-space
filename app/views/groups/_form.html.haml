@@ -10,13 +10,13 @@
       = f.label :name, class: 'chat-group-form__label'
     .chat-group-form__field--right
       = f.text_field :name, class: 'chat__group_name chat-group-form__imput', placeholder: 'グループ名を入力してください'
-  .chat-group-form__field
+  .chat-group-form__field.clearfix
     / この部分はインクリメンタルサーチ(ユーザー追加の非同期化)のときに使用します
-  .chat-group-form__field
+  .chat-group-form__field.clearfix
     .chat-group-form__field--left
-      =f.label "チャットメンバー", class: 'chat-group-form__label'
+      = f.label "チャットメンバー", class: 'chat-group-form__label'
     .chat-group-form__field--right
-      =f.collection_check_boxes :user_ids, User.all, :id, :name
+      = f.collection_check_boxes :user_ids, User.all, :id, :name
       / この部分はインクリメンタルサーチ(ユーザー追加の非同期化)のときにも使用します
   .chat-group-form__field
     .chat-group-form__field--left
