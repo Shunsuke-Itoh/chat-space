@@ -1,7 +1,8 @@
 .side_bar {
   width: 300px;
-  background-color: $side_blue_dark;
+  background-color: #2f3e51;
   height: 100vh;
+  box-sizing: border-box;
 
   .user {
     background-color: $side_blue_dark;
