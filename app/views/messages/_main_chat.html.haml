@@ -12,14 +12,14 @@
 
   .messages
     = render @messages
-    .chat-input-form
-      = form_for [@group, @message] do |f|
-        .input-box
-          .input-box__message
-            = f.text_field :content, placeholder: "type a message", class: "input-box__textfield"
-          .input-box__image
-            = f.label :image, class: "input-box__image-btn" do
-              = icon('fas', 'image')
-              = f.file_field :image, class: "input-box__image__none"
-          .input-btn
-            = f.submit 'SEND', class: "input-btn__send"
+  .chat-input-form
+    = form_for [@group, @message] do |f|
+      .input-box
+        .input-box__message
+          = f.text_field :content, placeholder: "type a message", class: "input-box__textfield"
+        .input-box__image
+          = f.label :image, class: "input-box__image-btn" do
+            = icon('fas', 'image')
+            = f.file_field :image, class: "input-box__image__none"
+        .input-btn
+          = f.submit 'SEND', class: "input-btn__send"
