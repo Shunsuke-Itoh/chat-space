@@ -51,11 +51,11 @@
 # ------------------------------------
 server "13.114.234.10",
    user: "ec2-user",
-   roles: %w{app db web},
-   ssh_options: {
+   roles: %w{app db web}
+   #ssh_options: {
 #     user: "user_name", # overrides user setting above
 #     keys: %w(/home/user_name/.ssh/id_rsa),
 #     forward_agent: false,
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
-}
+#}
