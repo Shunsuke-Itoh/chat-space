@@ -16,8 +16,6 @@ module ChatSpace
 
       config.i18n.default_locale = :ja
 
-      config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
-
     end
     config.time_zone = 'Tokyo'
   end
